@@ -121,7 +121,8 @@ def SSNN(N, name=None, fps=90, fov=0.1, max_iter=20000, init_alpha=0.1, end_alph
     
     for i in range(max_iter):    
         a = ALPHA[i]
-        print("Iteration {0}".format(i))
+        if(i%100==0):
+            print("Iteration {0}".format(i))
         r, th = cart2pol(W[:,0], W[:,1])
         
         #dilation, rotation and translation factors
