@@ -20,7 +20,7 @@ from numpy.random import uniform as rand
 from time import perf_counter
 from IPython.display import display
 import pickle
-import winsound
+#import winsound
 
 def writePickle(path, obj):
     with open(path, 'wb') as handle:
@@ -93,10 +93,10 @@ def imshow(pic, size=(10,10)):
     plt.imshow(pic, interpolation='none')
     plt.show()
 
-def alarm():
-    winsound.Beep(600,400)
-    winsound.Beep(600,400)
-    winsound.Beep(600,400)
+#def alarm():
+#    winsound.Beep(600,400)
+#    winsound.Beep(600,400)
+#    winsound.Beep(600,400)
 
 def SSNN(N, name=None, fps=90, fov=0.1, max_iter=20000, init_alpha=0.1, end_alpha=0.0005, V = False):
     """Self Similar Neural Network algorithm, generating retinal tessellations
@@ -180,7 +180,7 @@ def SSNN(N, name=None, fps=90, fov=0.1, max_iter=20000, init_alpha=0.1, end_alph
     if V: writer.close()
     torch.cuda.empty_cache()
     
-    alarm()
+    #alarm()
     return W
 
 """
